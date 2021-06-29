@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.ortakeaway.fragments.fragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegistro"
+            app:destination="@id/fragmentRegistro" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentOlvidPass1"
+            app:destination="@id/fragmentOlvidPass1" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegistro"
+        android:name="com.example.ortakeaway.fragments.fragmentRegistro"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_fragmentRegistro_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOlvidPass1"
+        android:name="com.example.ortakeaway.fragments.fragmentOlvidPass1"
+        android:label="fragment_olvid_pass1"
+        tools:layout="@layout/fragment_olvid_pass1" >
+        <action
+            android:id="@+id/action_fragmentOlvidPass1_to_fragmentOlvidPass2"
+            app:destination="@id/fragmentOlvidPass2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOlvidPass2"
+        android:name="com.example.ortakeaway.fragments.fragmentOlvidPass2"
+        android:label="fragment_olvid_pass2"
+        tools:layout="@layout/fragment_olvid_pass2" >
+        <action
+            android:id="@+id/action_fragmentOlvidPass2_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInicio"
+        android:name="com.example.ortakeaway.fragments.fragmentInicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentPagar"
+            app:destination="@id/fragmentPagar" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentHist"
+            app:destination="@id/fragmentHist" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentPerfil"
+            app:destination="@id/fragmentPerfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPagar"
+        android:name="com.example.ortakeaway.fragments.fragmentPagar"
+        android:label="fragment_pagar"
+        tools:layout="@layout/fragment_pagar" >
+        <action
+            android:id="@+id/action_fragmentPagar_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHist"
+        android:name="com.example.ortakeaway.fragments.fragmentHist"
+        android:label="fragment_hist"
+        tools:layout="@layout/fragment_hist" >
+        <action
+            android:id="@+id/action_fragmentHist_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+        <action
+            android:id="@+id/action_fragmentHist_to_fragmentPerfil"
+            app:destination="@id/fragmentPerfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPerfil"
+        android:name="com.example.ortakeaway.fragments.fragmentPerfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentHist"
+            app:destination="@id/fragmentHist" />
+    </fragment>
+</navigation>
